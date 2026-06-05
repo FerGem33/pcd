@@ -253,7 +253,7 @@ h3 {
 .family-names {
   color: var(--blue);
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(1.65rem, 6vw, 2.25rem);
+  font-size: clamp(1.0rem, 6vw, 2.25rem);
   font-weight: 700;
   line-height: 1.08;
 }
