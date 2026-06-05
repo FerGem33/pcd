@@ -1,0 +1,459 @@
+:root {
+  --cream: #fbf8f1;
+  --white: #ffffff;
+  --gold: #b78a22;
+  --soft-gold: #dcc27a;
+  --blue: #1d3f73;
+  --light-blue: #dbeaf2;
+  --text: #3d3528;
+  --muted: #746b5f;
+  --floral-frame-opacity: .42;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(219,234,242,.75), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(220,194,122,.35), transparent 35%),
+    var(--cream);
+  color: var(--text);
+}
+
+.floral-frame {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    url("assets/marco-floral.png"),
+    url("assets/marco-floral.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: var(--floral-frame-opacity);
+}
+
+main,
+#musicBtn {
+  position: relative;
+  z-index: 1;
+}
+
+.section {
+  min-height: auto;
+  padding: 42px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero {
+  border: 18px solid rgba(255,255,255,.7);
+  min-height: 100svh;
+  flex-direction: column;
+  padding: 48px 22px;
+  gap: 0;
+}
+
+.cross {
+  font-size: 50px;
+  color: var(--gold);
+  margin-bottom: 14px;
+  text-shadow: 0 5px 18px rgba(183, 138, 34, .25);
+}
+
+.small-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.2rem, 4vw, 2rem);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--text);
+  max-width: 720px;
+}
+
+h1 {
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(4.6rem, 15vw, 9rem);
+  line-height: .82;
+  color: var(--gold);
+  font-weight: 400;
+  margin: 24px 0 6px;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin-top: 10px;
+}
+
+h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 8vw, 4.3rem);
+  color: var(--blue);
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.phrase {
+  max-width: 620px;
+  margin: 24px auto 28px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+  color: var(--muted);
+}
+
+.main-btn,
+.outline-btn {
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 15px 28px;
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+
+.main-btn {
+  background: linear-gradient(135deg, var(--gold), #d4b35f);
+  color: white;
+  box-shadow: 0 15px 30px rgba(183,138,34,.25);
+}
+
+.outline-btn {
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  background: rgba(255,255,255,.55);
+  margin-top: 24px;
+}
+
+.main-btn:hover,
+.outline-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 32px rgba(61,53,40,.18);
+}
+
+.card-section {
+  padding-block: 34px;
+}
+
+.card {
+  background: rgba(255,255,255,.78);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(183,138,34,.22);
+  border-radius: 28px;
+  padding: 42px 28px;
+  width: min(680px, 100%);
+  box-shadow: 0 24px 60px rgba(61,53,40,.12);
+}
+
+.icon {
+  font-size: 44px;
+}
+
+.card-icon {
+  display: block;
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.2rem, 7vw, 4rem);
+  color: var(--blue);
+  margin: 12px 0 20px;
+}
+
+.date,
+.time {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--gold);
+  margin: 8px 0;
+}
+
+.place {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+}
+
+.address {
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.family-card {
+  padding: 38px 28px 36px;
+}
+
+.family-card::before {
+  content: "✦";
+  display: block;
+  color: var(--gold);
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.family-intro {
+  color: var(--muted);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.25rem, 5vw, 1.7rem);
+  line-height: 1.25;
+  margin-bottom: 22px;
+}
+
+.family-group {
+  padding: 20px 0;
+}
+
+.family-group + .family-group {
+  border-top: 1px solid rgba(183,138,34,.2);
+}
+
+.family-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--gold);
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.family-title::before,
+.family-title::after {
+  content: "";
+  width: 42px;
+  height: 1px;
+  background: rgba(183,138,34,.35);
+}
+
+.family-names {
+  color: var(--blue);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.65rem, 6vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.08;
+}
+
+.family-names + .family-names {
+  margin-top: 8px;
+}
+
+.family-names + .family-names::before {
+  content: "-";
+  display: block;
+  color: var(--gold);
+  font-family: "Great Vibes", cursive;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.countdown-section {
+  padding-block: 40px;
+  background: rgba(255,255,255,.35);
+}
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(70px, 120px));
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.countdown div {
+  background: white;
+  border-radius: 20px;
+  padding: 22px 12px;
+  border: 1px solid rgba(183,138,34,.22);
+  box-shadow: 0 18px 35px rgba(61,53,40,.09);
+}
+
+.countdown span {
+  display: block;
+  font-size: clamp(1.8rem, 7vw, 3rem);
+  color: var(--gold);
+  font-weight: 700;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.countdown small {
+  color: var(--muted);
+  text-transform: uppercase;
+  font-size: .75rem;
+  letter-spacing: 1px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 20px 42px;
+  color: var(--muted);
+}
+
+.guest-field {
+  display: grid;
+  gap: 10px;
+  width: min(310px, 100%);
+  margin: 24px auto 0;
+  text-align: left;
+}
+
+.guest-field span {
+  color: var(--muted);
+  font-size: .9rem;
+  font-weight: 500;
+}
+
+.guest-field input {
+  width: 100%;
+  border: 1px solid rgba(183,138,34,.35);
+  border-radius: 999px;
+  background: rgba(255,255,255,.85);
+  color: var(--text);
+  font: 600 1rem "Montserrat", sans-serif;
+  padding: 14px 18px;
+  text-align: center;
+  outline: none;
+}
+
+.guest-field input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 4px rgba(183,138,34,.14);
+}
+
+.rsvp-btn {
+  margin-top: 18px;
+}
+
+.decor {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border: 2px solid rgba(183,138,34,.18);
+  border-radius: 45% 55% 60% 40%;
+  z-index: -1;
+}
+
+.decor-top-left {
+  top: 5%;
+  left: -80px;
+  transform: rotate(35deg);
+}
+
+.decor-top-right {
+  top: 8%;
+  right: -80px;
+  transform: rotate(-35deg);
+}
+
+.js-enabled .reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity .8s ease, transform .8s ease;
+}
+
+.js-enabled .reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#musicBtn {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: var(--blue);
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(0,0,0,.22);
+}
+
+@media (max-width: 560px) {
+  :root {
+    --floral-frame-opacity: .5;
+  }
+
+  .floral-frame {
+    background-size: auto 100svh;
+  }
+
+  .section {
+    padding: 28px 16px;
+  }
+
+  .hero {
+    border-width: 10px;
+    padding: 34px 16px;
+    justify-content: center;
+  }
+
+  .cross {
+    font-size: 42px;
+    margin-bottom: 10px;
+  }
+
+  .small-title {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    line-height: 1.35;
+  }
+
+  h1 {
+    font-size: clamp(4.2rem, 23vw, 6.4rem);
+    margin: 20px 0 4px;
+  }
+
+  .subtitle {
+    margin-top: 8px;
+  }
+
+  h2 {
+    font-size: clamp(2.2rem, 11vw, 3.2rem);
+    line-height: 1;
+  }
+
+  .phrase {
+    margin: 20px auto 24px;
+    line-height: 1.25;
+  }
+
+  .card-section {
+    padding-block: 24px;
+  }
+
+  .countdown {
+    grid-template-columns: repeat(2, minmax(110px, 1fr));
+  }
+
+  .card {
+    padding: 34px 20px;
+  }
+}

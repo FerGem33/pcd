@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Primera Comunión</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="floral-frame" aria-hidden="true"></div>
+
+  <audio id="music" loop preload="auto">
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <main>
+    <section class="hero section" id="inicio">
+      <div class="decor decor-top-left"></div>
+      <div class="decor decor-top-right"></div>
+
+      <div class="cross">✝</div>
+
+      <p class="small-title">Con alegría te invitamos a celebrar la</p>
+      <h1>Primera<br>Comunión</h1>
+      <p class="subtitle">de</p>
+      <h2 id="childName">Nombre del niño</h2>
+
+      <p class="phrase">
+        “Hoy recibo a Jesús en mi corazón, rodeado del amor de mi familia.”
+      </p>
+
+      <button class="main-btn" onclick="scrollToSection('info')">
+        Ver invitación
+      </button>
+    </section>
+
+    <section class="section card-section">
+      <div class="card reveal family-card">
+
+        <div class="family-group">
+          <p class="family-title">Mis padres</p>
+          <p class="family-names">Aida Montserrat Ruiz Berlanga</p>
+          <p class="family-names">Fernanddo Baltazar López Orozco</p>
+        </div>
+
+        <div class="family-group">
+          <p class="family-title">Mis padrinos</p>
+          <p class="family-names">Claudia Elena Ruiz Berlanga</p>
+          <p class="family-names">Luis Humberto Mayorga Delena</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section card-section" id="info">
+      <div class="card reveal">
+        <img class="card-icon" src="assets/iglesia.png" alt="" aria-hidden="true">
+        <h3>Ceremonia religiosa</h3>
+        <p class="date">Sábado 13 de junio</p>
+        <p class="time">10:00 AM</p>
+        <p class="place">Parroquia de San Patricio</p>
+        <p class="address">Av. Oriente No. 1315, Col. Vista Hermosa, C.P. 25010</p>
+        <a class="outline-btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Parroquia%20de%20San%20Patricio%20Av.%20Oriente%201315%20Vista%20Hermosa%20Saltillo%20Coahuila">
+          Ver ubicación de la misa
+        </a>
+      </div>
+    </section>
+
+    <section class="section card-section">
+      <div class="card reveal">
+        <img class="card-icon" src="assets/palapa.jpg" alt="" aria-hidden="true">
+        <h3>Recepción</h3>
+        <p class="place">Casa Palapa</p>
+        <p class="address">Perú 310, Col. América, 25290 Saltillo, Coah.</p>
+        <a class="outline-btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Per%C3%BA%20310%2C%20Am%C3%A9rica%2C%2025290%20Saltillo%2C%20Coahuila">
+          Ver ubicación de la recepción
+        </a>
+      </div>
+    </section>
+
+    <section class="section countdown-section">
+      <div class="reveal">
+        <h3>Faltan</h3>
+        <div class="countdown" id="countdown">
+          <div><span id="days">00</span><small>Días</small></div>
+          <div><span id="hours">00</span><small>Horas</small></div>
+          <div><span id="minutes">00</span><small>Min</small></div>
+          <div><span id="seconds">00</span><small>Seg</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section card-section">
+      <div class="card reveal">
+        <h3>Confirmación</h3>
+        <p>Nos encantaría contar con tu presencia en este día tan especial.</p>
+        <label class="guest-field" for="guestCount">
+          <span>Cantidad de personas que asistirán</span>
+          <input id="guestCount" type="number" min="1" max="20" value="1" inputmode="numeric" aria-label="Cantidad de personas que asistirán" />
+        </label>
+        <button class="main-btn rsvp-btn" onclick="confirmWhatsApp()">Confirmar asistencia</button>
+      </div>
+    </section>
+  </main>
+
+  <button id="musicBtn" title="Música">♪</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
