@@ -173,6 +173,18 @@ h2 {
   margin: 0 auto;
 }
 
+.envelope-icon {
+  display: block;
+  width: 58px;
+  height: 58px;
+  margin: 0 auto;
+  fill: rgba(220,194,122,.14);
+  stroke: var(--gold);
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 h3 {
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(2.2rem, 7vw, 4rem);
